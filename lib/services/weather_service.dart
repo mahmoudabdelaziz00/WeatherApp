@@ -6,7 +6,6 @@ class WeatherService {
   final Dio dio;
   final String baseUrl = 'http://api.weatherapi.com/v1';
   final String apiKey = 'b616d44927a940ea9e363352252002';
-  final String name = '' ;
 
   WeatherService(this.dio);
 
