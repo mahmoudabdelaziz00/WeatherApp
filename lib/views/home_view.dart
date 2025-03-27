@@ -31,7 +31,17 @@ class _HomeViewState extends State<HomeView> {
           ),
         ],
       ),
-      body: weatherModel == null ? const NoWeatherBody() : WeatherInfoBody(),
+      body:  const NoWeatherBody(),
     );
   }
 }
+
+/*
+* Steps Of Bloc Pattern :-
+* 1. Create State
+* 2. Create Cubit
+* 3. Create Function
+* 4. Provide Cubit
+* 5. integrate Cubit
+* 6. Trigger Cubit
+* */
