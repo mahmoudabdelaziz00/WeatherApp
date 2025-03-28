@@ -34,14 +34,16 @@ class _HomeViewState extends State<HomeView> {
           ),
         ],
       ),
-      body:  BlocBuilder <GetWeatherCubit , WeatherState>(
+      body: BlocBuilder <GetWeatherCubit , WeatherState>(
           builder: (context , state){
             if(state is WeatherInitialState){
-              return NoWeatherBody();
+              return const NoWeatherBody();
             }else if(state is WeatherLoadedState){
-              return WeatherInfoBody();
+              return WeatherInfoBody(
+                weather: state.weatherModel,
+              );
             }else{
-              return Text('OOPS , There was an error');
+              return const Text('OOPS , There was an error');
             }
           },
       ),
